@@ -143,7 +143,7 @@ public class Chessboard
 		public abstract void unmarkReachableFields();
 	}
 
-	public class Pawn extends Chesspiece//pawn gÂ rakt fram 2 rader i bˆrjan , efterÂt 1 rad
+	public class Pawn extends Chesspiece//pawn g√• rakt fram 2 rader i b√∂rjan , efter√•t 1 rad
 	{
 		public Pawn(char color, char namn)
 		{
@@ -173,7 +173,7 @@ public class Chessboard
 		}
 	}
 
-	public class Rook extends Chesspiece //gÂ rakt
+	public class Rook extends Chesspiece //g√• rakt
 	{
 		public Rook(char color, char name)
 		{
@@ -182,9 +182,9 @@ public class Chessboard
 
 		public void markReachableFields()
 		{
-			// GÂr l‰ngst med hela raden och m‰rker den eller gÂr l‰ngst med hela kolumnen och m‰rker den
+			// G√•r l√§ngst med hela raden och m√§rker den eller g√•r l√§ngst med hela kolumnen och m√§rker den
 			for(byte j = 0; j <= NUMBER_OF_COLUMNS; j++)
-			    if (Chessboard.this.isValidField (row,j) && (j != column))//ska till nÂn annat kolumn som inte ‰r den som stÂr just nu
+			    if (Chessboard.this.isValidField (row,j) && (j != column))//ska till n√•n annat kolumn som inte √§r den som st√•r just nu
 			    {
 		            int r = row - FIRST_ROW;
 		            int c = j - FIRST_COLUMN;
@@ -308,7 +308,7 @@ public class Chessboard
 			super(color, name);
 		}
 		int[] movement = {1, 1, -1, -1, 1};
-		public void markReachableFields()//gÂ som rook
+		public void markReachableFields()//g√• som rook
 		{
 			for(byte j = 0; j <= NUMBER_OF_COLUMNS; j++)
 			{
@@ -328,7 +328,7 @@ public class Chessboard
 					Chessboard.this.fields[r][c].mark();
 				}
 			}
-			for (int i = 1; i < 8; i++)//gÂ som bishop
+			for (int i = 1; i < 8; i++)//g√• som bishop
 			{
 				for (int j = 0; j < 4; j++)
 				{
@@ -362,7 +362,7 @@ public class Chessboard
 					Chessboard.this.fields[r][c].unmark();
 				}
 			}
-			for (int i = 1; i < 8; i++)//gÂ som bishop
+			for (int i = 1; i < 8; i++)//g√• som bishop
 			{
 				for (int j = 0; j < 4; j++)
 				{
